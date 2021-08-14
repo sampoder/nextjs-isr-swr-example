@@ -7,6 +7,6 @@ export default function App(props){
 }
 
 export async function getStaticProps(){
-	const { getTaxiData } = require("./api/index")
+	const { getTaxiData } = require("../lib/helpers")
 	return { props: (await getTaxiData()), revalidate: 1 }
 }
